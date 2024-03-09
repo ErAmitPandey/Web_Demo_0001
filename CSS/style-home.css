@@ -1,0 +1,251 @@
+body {
+    font: 100% Lucida Sans, Verdana;
+    display: flex;
+    flex-direction: column;
+}
+
+/*This style-area for header*/
+.top {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #999;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 2px 7px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: lightskyblue;
+}
+
+.btn:first-child {
+    background-color: lightblue;
+}
+
+/*This style-area for menubar, menulist, menuitem and sidenav*/
+.menuitem {
+    border-radius: 2px;
+    margin: 2px;
+}
+
+.menubar {
+    width: 110px;
+    float: left
+}
+
+.menulist {
+    margin: 0;
+    padding: 0;
+}
+
+.menuitem {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    list-style-type: none;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menuitem:hover {
+    background-color: lightskyblue;
+}
+
+.menuitem:first-child {
+    background-color: lightblue;
+    color: black;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 30%) {
+    .sidebar {
+        width: auto;
+        position: relative;
+    }
+
+}
+
+@media (max-width: 70%) {
+    .menubar {
+        width: auto;
+        float: none;
+    }
+
+}
+
+/*This style-area for wrapper and main*/
+.wrapper {
+    position: relative;
+}
+
+#main {
+    margin: 2px 160px 7px 120px;
+    padding: 2px;
+}
+
+/* This is for footer style sheet 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    display: table;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #777;
+    flex-direction: row;
+    bottom: 0;
+    padding: 10px 10px 30px 10px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    height: auto;
+    text-align: center;
+    padding: 7px;
+}
+
+.footer img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+    text-align: center;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    text-align: center;
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 900px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}

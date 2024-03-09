@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web/HTML & CSS</title>
+    <link rel="icon" href="/Images/logo.png">
+    <link rel="stylesheet" href="/CSS/style-home.css">
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*
+        table tbody tr:nth-child(even){
+            background-color: ;
+        }
+        */
+        /*responsive-------------
+        .responsive {
+            border-collapse: collapse;
+            background-color: lightblue;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .color-select {
+            th:nth-of-type(odd) {
+                background-color: grey;
+            }
+
+            th:nth-of-type(even) {
+                background-color: lightgrey
+            }
+        }
+        */
+        /*
+        .equals:table,
+        th,
+        td {
+            border: 1px solid;
+        }
+
+        table {
+            width: 100%;
+            max-width: 400px;
+            height: 240px;
+            margin: 0 auto;
+            display: block;
+            overflow-x: auto;
+            border-spacing: 0;
+        }
+
+        tbody {
+            white-space: nowrap;
+        }
+
+        th,
+        td {
+            padding: 5px 10px;
+            border-top-width: 0;
+            border-left-width: 0;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            vertical-align: bottom;
+        }
+
+        th:last-child,
+        td:last-child {
+            border-right-width: 0;
+        }
+
+        tr:last-child td {
+            border-bottom-width: 0;
+        }
+
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <span class="column">
+            <img align="left" src="/Images/logo.png" width="50px" height="50px">
+        </span>
+        <span class="column">
+            <h1 style="margin-top: 5px; margin-bottom: 5px;">Welcome to SAS Network</h1>
+            <p>Continue >>>
+                <button class="btn"><a href="home.html">Home</a></button>
+                <button class="btn"><a href="menu.html">Menu</a></button>
+                <button class="btn"><a href="gallery.html">Gallery</a></button>
+                <button class="btn"><a href="about.html">About</a></button>
+            </p>
+        </span>
+        <span style="float: right; margin: 10px;">
+            <label for="tnb-search-container"></label>
+            <input id="tnb-google-search-input" type="text" placeholder="Search..." autocomplete="off">
+        </span>
+    </header>
+    <table class="responsive" cellpadding="5px" border=" 2px solid collapse">
+        <thead>
+            <tr>
+                <th align="left" colspan="2" height="50px" bgcolor="turquoise">
+                    <h1>(X)HTML tutorial</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td bgcolor="#84f5be">Introduction</td>
+                <td rowspan="17">
+                    <h2>Tables</h2>
+                    <p>The
+                        &lttable&gt; tag can also be used to display content in tabular format. There are two types
+                        of
+                        tables:
+                        data tables and layout tables. Data tables are tables which contain information mean to be
+                        evaluated in columns and rows. Layout tables are tables used to be place content at specific
+                        locations on the web page. From a coding point of view, data and layout tables are produced
+                        in
+                        almost the same manner. The discussion below represents something of a simplified account of
+                        tables and their use.
+                    </p>
+                    <hr>
+                    <h3>Data Tables</h3>
+                    <p>
+                        Data tables have the following structure:
+                    </p>
+                    <table border="1" align="center">
+                        <tr>
+                            <th></th>
+                            <th>Column 1 Header</th>
+                            <th>Column 2 Header</th>
+                        </tr>
+                        <tr>
+                            <td>ROW 1</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ROW 2</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table><br>
+                    <p>
+                        This structure is produced using the following elements:
+                    </p>
+                    <table border="1" align="center">
+                        <tr>
+                            <th>Element</th>
+                            <th>Discription</th>
+                        </tr>
+                        <tr>
+                            <td>&lttable&gt;</td>
+                            <td> Table Element</td>
+                        </tr>
+                        <tr>
+                            <td>&lttr&gt;</td>
+                            <td> Table Row</td>
+                        </tr>
+                        <tr>
+                            <td>&ltth&gt;</td>
+                            <td> Table Header (the column header)</td>
+                        </tr>
+                        <tr>
+                            <td>&lttd&gt;</td>
+                            <td> Table Cell </td>
+                        </tr>
+                    </table>
+                    <p>
+                        Hence the code to produce the first table above is:
+                    </p>
+                    <xmp align="left">
+                        <table>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>Column 1 Header</th>
+                                <th>Column 2 Header</th>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </xmp>
+                    <p>
+                        Notice that empty table cells are filled with the entity &nbsp;. If this is omitted, the
+                        cell
+                        borders will not always display correctly.
+                    </p>
+                    <p>
+                        Table headers (
+                        &lttr&gt;) are by default displayed in bold and centred in most browsers. However, this
+                        behaviour can be changed
+                        using CSS. Data tables must have column headers for reasons of accessibility, since many
+                        assistive
+                        technologies read tables horizontally, rather than down columns.
+                    </p>
+                    <p>
+                        The appearance of tables can be adjusted through the use of attributes and/or CSS. The
+                        following
+                        attributes are commonly used for the
+                        &lttable&gt; element (there are others).
+                    </p>
+                    <table border="2" align="center">
+                        <tr bgcolor="yellow">
+                            <th>Attribute</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td bgcolor="pink">@align</td>
+                            <td>Table Alignment.</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="pink">@width</td>
+                            <td>Table Width.</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="pink">@border</td>
+                            <td>Table Border.</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="pink">@cellspacing</td>
+                            <td>Space between table cells.</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="pink">@cellpadding</td>
+                            <td bgcolor="chocolate">Padding between cell border and their content.</td>
+                        </tr>
+                    </table>
+                    <p>
+                        All these attributes (except for @align) are measured in pixels by default, or by
+                        percentages if
+                        they have a percentage sign. The following table element uses all these attributes:
+                    </p>
+                    <xmp>
+                        <table align="center" width="50%" border="1" cellspacing="5" cellpadding=5">
+                    </xmp>
+                    <p>
+                        The following attributes are commonly used inside the
+                        &ltth&gt and
+                        &lttd&gt elements (there are others):
+                    </p>
+                    <table border="1" cellspacing="0" align="center">
+                        <tr bgcolor="grey">
+                            <th>Attribute</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@align</td>
+                            <td>Call Alignment</td>
+                        </tr>
+                        <tr>
+                            <td>@width</td>
+                            <td>Cell Width</td>
+                        </tr>
+                        <tr>
+                            <td>@height</td>
+                            <td>Cell Height</td>
+                        </tr>
+                        <tr>
+                            <td>@colspan</td>
+                            <td>Make the row span multiple columns</td>
+                        </tr>
+                        <tr>
+                            <td>@rowspan</td>
+                            <td>Make the column span multiple rows</td>
+                        </tr>
+                    </table>
+                    <p>
+                        The use of @colspan is illustrated in the following table:
+                    </p>
+                    <table border="1" align="center">
+                        <tr>
+                            <th colspan="2">Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                        <tr>
+                            <td>Subcolumn A</td>
+                            <td>Subcolumn B</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p>
+                        In the first row of the column, the code
+                        &lttd colspan="2"&gt is used to indicate that the row should span two column. @colspan is
+                        used
+                        in a similar
+                        way.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">How Web Pages Work</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Basic (X)HTML Syntax</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">A Basic Web Page</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Standards and Best Practices</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Elements</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Attributes</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">The Semantic Web</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Cascading Stylesheets(CSS)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Styling Text</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Special Characters and Entities</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Likes</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Images</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">List</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Tables</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Publishing Web Pages</td>
+            </tr>
+            <tr>
+                <td bgcolor="#84f5be">Other Tutorials</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr colspan="2" bgcolor="turquoise" align="center">
+                <td colspan="2">
+                    Digital Home &nbsp;
+                    © 2021
+                    <a href="https://twitter.com/amitpandey7vns">Er. Amit Pandey.</a> All rights reserved.
+                </td>
+        </tfoot>
+    </table><br>
+    <hr>
+    <summary style="padding: 10px;">
+        History courses offered in the community of
+        Bath arranged by course name, tutor, summary,
+        code, and fee:-
+    </summary>
+    <table border="1px" cellspacing="0" width="50%">
+        <tr>
+            <th colspan="5" scope="colgroup" bgcolor="yellow">
+                Community Courses -- Er. Amit Pandey 1999</th>
+        </tr>
+        <tbody>
+            <tr bgcolor="grey">
+                <th scope="col" abbr="Name">Course Name</th>
+                <th scope="col" abbr="Tutor">Course Tutor</th>
+                <th scope="col">Summary</th>
+                <th scope="col">Code</th>
+                <th scope="col" bgcolor="green">Fee</th>
+            </tr>
+            <tr>
+                <td scope="row">After the Civil War</td>
+                <td>Dr. Amit Pandey</td>
+                <td style="background-color: #327da8;">
+                    The course will examine the turbulent years in England
+                    after 1646. <em>6 weekly meetings starting every Monday.</em>
+                </td>
+                <td>H27</td>
+                <td style="background-color: lightgreen;">7000/-&#8377</td>
+            </tr>
+            <tr>
+                <td scope="row">An Introduction to Anglo-Saxon England</td>
+                <td>Dr. Vikas Divyakirti </td>
+                <td bgcolor="#327da8">
+                    One day course introducing the early medieval
+                    period reconstruction the Anglo-Saxons and
+                    their society. <em>Saturday 18th October.</em>
+                </td>
+                <td>H28</td>
+                <td style="background-color: lightgreen;">9000/- &#8377</td>
+            </tr>
+            <tr>
+                <td scope="row">The Glory that was Greece</td>
+                <td>Arun Singh</td>
+                <td style="background-color: #327da8;">
+                    Birthplace of democracy, philosophy, heartland of theater, home of
+                    argument. The Romans may have done it but the Greeks did it
+                    first. <em>Saturday day school 25th October 1997</em>
+                </td>
+                <td>H30</td>
+                <td style="background-color: lightgreen;">2000/- &#8377</td>
+            </tr>
+        </tbody>
+    </table><br>
+    <table style="background-color: aqua; margin-left: auto; margin-right: auto;" border="2px">
+        <tr>
+            <th rowspan="3">day</th>
+            <th colspan="3">seminar</th>
+        <tr>
+            <td colspan="2">schedule</td>
+            <th rowspan="2">topic</th>
+        <tr>
+            <td>begin</td>
+            <td>end</td>
+        </tr>
+        </tr>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2" bgcolor="orange">8:00 a.m.</td>
+            <td rowspan="2" bgcolor="blue">5:00 p.m.</td>
+            <td>Introduction to XML.</td>
+        <tr>
+            <td>Validity: DTD and Relax NG</td>
+        </tr>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td bgcolor="orange">8:00 a.m.</td>
+            <td bgcolor="orange">11:00 a.m.</td>
+            <td>XPath</td>
+        <tr>
+            <td bgcolor="orange">11:00 a.m.</td>
+            <td bgcolor="green">2:00 p.m.</td>
+            <td rowspan="2">XSL Transformatics</td>
+        </tr>
+        <tr>
+            <td bgcolor="green">2:00 p.m.</td>
+            <td bgcolor="blue">5:00 p.m.</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td bgcolor="orange">8:00 a.m.</td>
+            <td bgcolor="green">12:00 p.m.</td>
+            <td>XSL Formatting Objects</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Thursday</td>
+            <td bgcolor="orange">8:00 a.m.</td>
+            <td bgcolor="green">11:00 a.m.</td>
+            <td rowspan="2">XS Formatting 1</td>
+        <tr>
+            <td bgcolor="orange">11:00 a.m.</td>
+            <td bgcolor="green">2:00 p.m.</td>
+        </tr>
+        <tr>
+            <td bgcolor="orange">2:00 p.m.</td>
+            <td bgcolor="green">5:00 p.m.</td>
+            <td rowspan="1">XS Formatting 2</td>
+        </tr>
+        </tr>
+    </table><br>
+    <table border="1" width="80%" cellpadding="30" bgcolor="#BFC9CA ">
+        <tr>
+            <td>
+                <table border="1" style="text-align: center; width: 100%; background-color: #F8F9F9;" cellpadding="20">
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>Ramesh Raman</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>Rajesh Kumar</td>
+                        <td>7000</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table><br>
+    <table role="table">
+        <thead role="rowgroup">
+            <tr class="color-select" role="row">
+                <th role="columnheader">First Name</th>
+                <th role="columnheader">Job Title</th>
+                <th role="columnheader">Favorite Color</th>
+                <th role="columnheader">Date of Birth</th>
+                <th role="columnheader">Dream Vacation City</th>
+                <th role="columnheader">E-mail</th>
+            </tr>
+        </thead>
+        <tbody role="rowgroup">
+            <tr role="row">
+                <td role="cell">Amit</th>
+                <td role="cell">Front-End Developer</th>
+                <td role="cell">Yellow</th>
+                <td role="cell">01/01/01</th>
+                <td role="cell">Gotham City</th>
+                <td role="cell">work@gmail.com</th>
+            </tr>
+            <tr role="row">
+                <td role="cell">Amit</th>
+                <td role="cell">Front-End Developer</th>
+                <td role="cell">Yellow</th>
+                <td role="cell">01/01/01</th>
+                <td role="cell">Gotham City</th>
+                <td role="cell">work@gmail.com</th>
+            </tr>
+            <tr role="row">
+                <td role="cell">Amit</th>
+                <td role="cell">Front-End Developer</th>
+                <td role="cell">Yellow</th>
+                <td role="cell">01/01/01</th>
+                <td role="cell">Gotham City</th>
+                <td role="cell">work@gmail.com</th>
+            </tr>
+            <tr role="row">
+                <td role="cell">Amit</th>
+                <td role="cell">Front-End Developer</th>
+                <td role="cell">Yellow</th>
+                <td role="cell">01/01/01</th>
+                <td role="cell">Gotham City</th>
+                <td role="cell">work@gmail.com</th>
+            </tr>
+            <tr role="row">
+                <td role="cell">Amit</th>
+                <td role="cell">Front-End Developer</th>
+                <td role="cell">Yellow</th>
+                <td role="cell">01/01/01</th>
+                <td role="cell">Gotham City</th>
+                <td role="cell">work@gmail.com</th>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table class="equals">
+        <thead>
+            <tr>
+                <th>1<sup>3</sup> equals:
+                <th>2<sup>3</sup> equals:
+                <th>3<sup>3</sup> equals:
+                <th>4<sup>3</sup> equals:
+                <th>5<sup>3</sup> equals:
+                <th>6<sup>3</sup> equals:
+                <th>7<sup>3</sup> equals:
+        <tbody>
+            <tr>
+                <td>row 1: 1
+                <td>row 1: 8
+                <td>row 1: 27
+                <td>row 1: 64
+                <td>row 1: 125
+                <td>row 1: 216
+                <td>row 1: 343
+            <tr>
+                <td>row 2: 1
+                <td>row 2: 8
+                <td>row 2: 27
+                <td>row 2: 64
+                <td>row 2: 125
+                <td>row 2: 216
+                <td>row 2: 343
+            <tr>
+                <td>row 3: 1
+                <td>row 3: 8
+                <td>row 3: 27
+                <td>row 3: 64
+                <td>row 3: 125
+                <td>row 3: 216
+                <td>row 3: 343
+            <tr>
+                <td>row 4: 1
+                <td>row 4: 8
+                <td>row 4: 27
+                <td>row 4: 64
+                <td>row 4: 125
+                <td>row 4: 216
+                <td>row 4: 343
+            <tr>
+                <td>row 5: 1
+                <td>row 5: 8
+                <td>row 5: 27
+                <td>row 5: 64
+                <td>row 5: 125
+                <td>row 5: 216
+                <td>row 5: 343
+            <tr>
+                <td>row 6: 1
+                <td>row 6: 8
+                <td>row 6: 27
+                <td>row 6: 64
+                <td>row 6: 125
+                <td>row 6: 216
+                <td>row 6: 343
+            <tr>
+                <td>row 7: 1
+                <td>row 7: 8
+                <td>row 7: 27
+                <td>row 7: 64
+                <td>row 7: 125
+                <td>row 7: 216
+                <td>row 7: 343
+            <tr>
+                <td>row 8: 1
+                <td>row 8: 8
+                <td>row 8: 27
+                <td>row 8: 64
+                <td>row 8: 125
+                <td>row 8: 216
+                <td>row 8: 343
+            <tr>
+                <td>row 9: 1
+                <td>row 9: 8
+                <td>row 9: 27
+                <td>row 9: 64
+                <td>row 9: 125
+                <td>row 9: 216
+                <td>row 9: 343
+            <tr>
+                <td>row 10: 1
+                <td>row 10: 8
+                <td>row 10: 27
+                <td>row 10: 64
+                <td>row 10: 125
+                <td>row 10: 216
+                <td>row 10: 343
+            <tr>
+                <td>row 11: 1
+                <td>row 11: 8
+                <td>row 11: 27
+                <td>row 11: 64
+                <td>row 11: 125
+                <td>row 11: 216
+                <td>row 11: 343
+            <tr>
+                <td>row 12: 1
+                <td>row 12: 8
+                <td>row 12: 27
+                <td>row 12: 64
+                <td>row 12: 125
+                <td>row 12: 216
+                <td>row 12: 343
+            <tr>
+                <td>row 13: 1
+                <td>row 13: 8
+                <td>row 13: 27
+                <td>row 13: 64
+                <td>row 13: 125
+                <td>row 13: 216
+                <td>row 13: 343
+            <tr>
+                <td>row 14: 1
+                <td>row 14: 8
+                <td>row 14: 27
+                <td>row 14: 64
+                <td>row 14: 125
+                <td>row 14: 216
+                <td>row 14: 343
+            <tr>
+                <td>row 15: 1
+                <td>row 15: 8
+                <td>row 15: 27
+                <td>row 15: 64
+                <td>row 15: 125
+                <td>row 15: 216
+                <td>row 15: 343
+            <tr>
+                <td>row 16: 1
+                <td>row 16: 8
+                <td>row 16: 27
+                <td>row 16: 64
+                <td>row 16: 125
+                <td>row 16: 216
+                <td>row 16: 343
+            <tr>
+                <td>row 17: 1
+                <td>row 17: 8
+                <td>row 17: 27
+                <td>row 17: 64
+                <td>row 17: 125
+                <td>row 17: 216
+                <td>row 17: 343
+            <tr>
+                <td>row 18: 1
+                <td>row 18: 8
+                <td>row 18: 27
+                <td>row 18: 64
+                <td>row 18: 125
+                <td>row 18: 216
+                <td>row 18: 343
+            <tr>
+                <td>row 19: 1
+                <td>row 19: 8
+                <td>row 19: 27
+                <td>row 19: 64
+                <td>row 19: 125
+                <td>row 19: 216
+                <td>row 19: 343
+            <tr>
+                <td>row 20: 1
+                <td>row 20: 8
+                <td>row 20: 27
+                <td>row 20: 64
+                <td>row 20: 125
+                <td>row 20: 216
+                <td>row 20: 343
+    </table>
+
+    <br>
+    <footer class="footer">
+        <div class="column">
+            <img src="/Images/logo.png">
+        </div>
+        <div class="column">
+            <!--
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        -->
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="/HTML/home.html">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="/HTML/about.html">Support</a></li>
+                <li class="menu__item"><a class="menu__link" href="/HTML/services.html">Services</a></li>
+                <li class="menu__item"><a class="menu__link" href="/HTML/career.html">Career</a></li>
+                <li class="menu__item"><a class="menu__link" href="/HTML/about.html">About</a></li>
+            </ul>
+            <p>&copy;2022 Er. Amit Pandey | All Rights Reserved</p>
+        </div>
+        <div class="column">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3608.183954177659!2d82.9959998040539!3d25.264396602001202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1696915744380!5m2!1sen!2sin"
+                width="180px" height="90px" style="border:1px; margin-top: 0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+    </footer>
+</body>
+
+</html>
